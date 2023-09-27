@@ -1,10 +1,4 @@
 
-## Getting Started
-
-
-
-
-
 # Next.js API Documentation
 
 This documentation provides an overview of the Next.js API. Each type has different types of API endpoints for various operations.
