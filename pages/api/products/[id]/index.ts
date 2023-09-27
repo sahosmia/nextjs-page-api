@@ -9,7 +9,7 @@ export default function handler(
 ) {
 
   const { id } = req.query
-  const data :any | undefined = products.find(product => product.id === parseInt(id));
+  const data :any | undefined = products.find(product => product.id === Number(id));
 
   function checkData() {
     if (!data) {        

@@ -9,7 +9,7 @@ export default function handler(
 ) {
 
   const { id } = req.query
-  const data :any | undefined = subcategories.find(subcategory => subcategory.id === parseInt(id));
+  const data :any | undefined = subcategories.find(subcategory => subcategory.id === Number(id));
 
   function checkData() {
     if (!data) {        

@@ -9,7 +9,7 @@ export default function handler(
 ) {
 
   const { id } = req.query
-  const data :any | undefined = categories.find(category => category.id === parseInt(id));
+  const data :any  = categories.find(category => category.id === Number(id) );
 
   function checkData() {
     if (!data) {        
@@ -23,6 +23,7 @@ export default function handler(
     case "GET":
       try { 
         checkData();
+        
         return res.status(200).json(successResponse(data));     
       } catch (error) {
         return res.status(500).json(errorResponse(error))
