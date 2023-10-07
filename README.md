@@ -1,40 +1,150 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Next.js API Documentation
 
-First, run the development server:
+This documentation provides an overview of the Next.js API. Each type has different types of API endpoints for various operations.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This is a fake dummy data API. You can use it for practice purposes to build single-page-applications or Anywhere.
+
+It is made by next.js with typescript. This next.js was Page router.
+
+#### Available Three Types Api
+- [Category (10)](https://nextjs-page-api.vercel.app/api/categories)  
+- [Subcategory (30)](https://nextjs-page-api.vercel.app/api/subcategories)  
+- [Product (150)](https://nextjs-page-api.vercel.app/api/products)  
+
+<br>
+
+## Category APIs :heart:
+
+### :point_right: Fetch API
+You will get 10 category list
+| Method   | Url                                                                         | Params |
+| -------- |:---------------------------------------------------------------------------:| ------:|
+| GET      | [Get All Categories](https://nextjs-page-api.vercel.app/api/categories)     | false  |
+| POST     | [Create a Category](https://nextjs-page-api.vercel.app/api/categories)      | false  |
+| GET      | [Get a Category](https://nextjs-page-api.vercel.app/api/categories/1)       | true   |
+| PUT      | [Update a Category](https://nextjs-page-api.vercel.app/api/categories/1)    | true   |
+| DELETE   | [Delete a Category](https://nextjs-page-api.vercel.app/api/categories/1)    | true   |
+
+
+
+### JSON Type
+```json
+{
+    "message": "Response Success",
+    "status": 200,
+    "total": 2,
+    "data": [
+        {
+            "id": 1,
+            "title": "Technology"
+        },
+        {
+            "id": 2,
+            "title": "Food & Drink"
+        },
+    ]
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> **Note:**  Params will be id and number type and required.
+>
+> title field is required for create and update :pushpin:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+<br>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Subcategory APIs :heart:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### :point_right: Fetch API
+You will get 30 subcategory list
+| Method   | Url                                                                               | Params |
+| -------- |:---------------------------------------------------------------------------------:| ------:|
+| GET      | [Get All Subcategories](https://nextjs-page-api.vercel.app/api/subcategories)     | false  |
+| POST     | [Create a Subcategory](https://nextjs-page-api.vercel.app/api/subcategories)      | false  |
+| GET      | [Get a Subcategory](https://nextjs-page-api.vercel.app/api/subcategories/1)       | true   |
+| PUT      | [Update a Subcategory](https://nextjs-page-api.vercel.app/api/subcategories/1)    | true   |
+| DELETE   | [Delete a Subcategory](https://nextjs-page-api.vercel.app/api/subcategories/1)    | true   |
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### JSON Type
+```json
+{
+    "message": "Response Success",
+    "status": 200,
+    "total": 2,
+    "data": [
+        {
+            "id": 1,
+            "title": "Mobile Apps",
+            "category_id": 1
+        },
+        {
+            "id": 2,
+            "title": "Web Development",
+            "category_id": 1
+        },
+    ]
+}
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+> **Note:**  Params will be id and number type and required.
+>
+> title and category_id field are required for create and update :pushpin:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<br>
+
+## Product APIs :heart:
+
+### :point_right: Fetch API
+You will get 150 Product list
+| Method   | Url                                                                      | Params |
+| -------- |:------------------------------------------------------------------------:| ------:|
+| GET      | [Get All Product](https://nextjs-page-api.vercel.app/api/products)       | false  |
+| POST     | [Create a Product](https://nextjs-page-api.vercel.app/api/products)      | false  |
+| GET      | [Get a Product](https://nextjs-page-api.vercel.app/api/products/1)       | true   |
+| PUT      | [Update a Product](https://nextjs-page-api.vercel.app/api/products/1)    | true   |
+| DELETE   | [Delete a Product](https://nextjs-page-api.vercel.app/api/products/1)    | true   |
+
+
+
+### JSON Type
+```json
+{
+    "message": "Response Success",
+    "status": 200,
+    "total": 2,
+    "data": [
+       {
+            "id": 1,
+            "title": "Premium Smartphone X1",
+            "category_id": 1,
+            "subcategory_id": 1,
+            "price": 599.99,
+            "product_details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "quantity": 100
+        },
+        {
+            "id": 2,
+            "title": "Ultra-Thin Laptop Pro",
+            "category_id": 1,
+            "subcategory_id": 1,
+            "price": 999.99,
+            "product_details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "quantity": 100
+        },
+    ]
+}
+```
+
+> **Note:**  Params will be id and number type and required.
+>
+> title, category_id, subcategory_id and price field are required for create and update :pushpin:
+
+
+
+# End
+**:bangbang: I will update it day by day and build another rest API using the app router. Thank You :bangbang:**
