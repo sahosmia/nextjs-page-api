@@ -69,7 +69,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     case "DELETE":
       try {
         checkData();
-        const index = users.findIndex((user) => user.user_name === user_name);
+        const index = blogs.findIndex((blog) => blog.slug === slug);
         users.splice(index, 1);
         return res.status(200).json(successResponse(data));
       } catch (error) {
